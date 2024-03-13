@@ -1,0 +1,124 @@
+:root {
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --fs: 15px;
+    --Poppins-font: "Poppins", sans-serif;
+    --title-weight: 600;
+    --content-weight: 400;
+    --subtitle-weight: 200;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    width: 500px;
+    align-self: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    margin-bottom: -2rem;
+    font-weight: var(--subtitle-weight);
+    font-size: 2rem;
+    color: var(--Very-Dark-Blue)
+}
+
+.title-2 {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: var(--title-weight);
+    color: var(--Very-Dark-Blue)
+}
+
+.sub-title {
+    font-size: var(--content-weight);
+    color: var(--Grayish-Blue);
+}
+
+body {
+    font-family: var(--Poppins-font);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    width: 90%;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(280px, 1fr))
+}
+
+div {
+    transition: all 0.2s ease;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+    --x: var(--Blue);
+    box-shadow: 0 15px 30px -10px var(--Grayish-Blue);
+    background: linear-gradient(var(--x), var(--x) 4px, var(--Very-Light-Gray) 4px)
+}
+
+div>h2 {
+    color: var(--Very-Dark-Blue);
+    font-size: calc(var(--fs) * 1.5);
+    font-weight: var(--title-weight);
+}
+
+div>p {
+    margin-bottom: 3rem;
+    font-size: var(--fs);
+    color: var(--Grayish-Blue);
+    font-weight: var(--content-weight);
+}
+
+img {
+    float: right;
+}
+
+.a {
+    --x: var(--Blue);
+}
+
+.b {
+    margin-bottom: 1.5rem;
+    --x: var(--Red);
+}
+
+.c {
+    --x: var(--Orange);
+}
+
+.d {
+    --x: var(--Cyan);
+}
+
+@media screen and (max-width:500px) {
+    header {
+        width: 100%;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+}
